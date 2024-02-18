@@ -6,8 +6,8 @@ import AddRecipe from "./components/AddRecipe";
 import Recipes from "./components/Recipe/Recipes";
 import About from "./components/About";
 import RecipeDetail from "./components/Recipe/RecipeDetail";
-import Login from "./views/login"
-import Signup from "./views/signup"
+import Login from "./views/auth/login"
+import Signup from "./views/auth/signup"
 
 
 function App() {
