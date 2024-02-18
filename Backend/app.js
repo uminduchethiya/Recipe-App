@@ -2,11 +2,13 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
+const cors =require("cors")
 const app = express();
 const router=require("./routes/recipe-routes");
 
 // Middleware
 app.use(express.json());
+app.use(cors());
 app.use("/recipes",router)
 
 mongoose
