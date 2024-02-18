@@ -1,5 +1,6 @@
 import React from 'react'
-import signupimg from '../assets/signup.jpg'
+import { Link } from "react-router-dom";
+import signupimg from '../../assets/signup.jpg'
 
 const signup = () => {
   return (
@@ -94,7 +95,7 @@ const signup = () => {
                                 <span className="h-px bg-gray-400 w-14"></span>
                                 <p className="message">
                                     Not registered?{" "}
-                                    {/* <Link to="/login">Sign In</Link> */}
+                                    <Link to="/login">Sign In</Link>
                                 </p>
                                 <span className="h-px bg-gray-400 w-14"></span>
                             </span>

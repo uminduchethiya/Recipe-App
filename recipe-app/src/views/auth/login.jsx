@@ -1,6 +1,6 @@
 
-import loginimage from '../assets/login.jpg';
-
+import loginimage from '../../assets/login.jpg';
+import { Link } from "react-router-dom";
 import React from 'react'
 const login = () => {
   return (
@@ -76,7 +76,7 @@ const login = () => {
                         <span className="h-px bg-gray-400 w-14"></span>
                         <p className="message">
                             Not registered?{" "}
-                            {/* <Link to="/signup">Create an account</Link> */}
+                            <Link to="/signup">Create an account</Link>
                         </p>
                         <span className="h-px bg-gray-400 w-14"></span>
                     </span>
