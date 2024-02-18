@@ -1,12 +1,14 @@
-import React from 'react'
 
+import loginimage from '../assets/login.jpg';
+
+import React from 'react'
 const login = () => {
   return (
     <div className="">
     <div className="flex flex-col md:flex-row w-full h-screen">
         <div className="md:w-1/2 h-screen  bg-opacity-50  rounded-lg  md:bg-white md:rounded-none z-10">
             <img
-                src={""}
+                src={loginimage}
                 alt="image"
                 className="w-full h-full "
             />
