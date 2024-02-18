@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axio from 'axios'
+
 import axios from 'axios';
 import Recipe from './Recipe';
 const URL="http://localhost:5001/recipes";
@@ -16,13 +16,14 @@ const Recipes = () => {
     console.log(recipes);
     
   return (
-    <div>
-      <ul>
+    <div className='flex flex-wrap justify-center gap-24 '>
+      
+
     {recipes && recipes.map((recipe,i)=>(<div key={i}>
-    <Recipe recipe={recipe}/>
+    <Recipe recipe={recipe} isHomePage={true}/>
 
     </div>))}
-      </ul>
+      
     </div>
   )
 }
