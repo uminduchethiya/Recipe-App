@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.png"
+import profile from "../assets/mingcute_user-2-fill.png"
 
 function Header() {
   return (
@@ -31,13 +33,16 @@ function Header() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                className="h-14 w-auto"
+                src={logo}
                 alt="Your Company"
               />
             </div>
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4 text-white">
+            <div class="hidden sm:ml-6 sm:block justify-center">
+              <div class=" px-16  flex mt-4 gap-28  space-x-4 text-white">
+              <a href="/home" class="hover:text-blue-500">
+                  <button>Home</button>
+                </a>
                 <a href="/add" class="hover:text-blue-500">
                   <button>Add Product</button>
                 </a>
@@ -51,26 +56,6 @@ function Header() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button
-              type="button"
-              className="bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-            >
-              <span className="sr-only">View notifications</span>
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-                />
-              </svg>
-            </button>
-
             <div className="ml-3 relative">
               <div>
                 <button
@@ -82,10 +67,10 @@ function Header() {
                 >
                   <span className="sr-only">Open user menu</span>
                   <img
-                    className="h-8 w-8 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  />
+                className="h-8 rounded-full"
+                src={profile}
+                alt="Your Company"
+              />
                 </button>
               </div>
             </div>
@@ -93,7 +78,7 @@ function Header() {
         </div>
       </div>
 
-      <div className="sm:hidden" id="mobile-menu">
+      {/* <div className="sm:hidden" id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1">
           <a
             href="#"
@@ -121,7 +106,7 @@ function Header() {
             Calendar
           </a>
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 }

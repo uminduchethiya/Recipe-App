@@ -38,22 +38,22 @@ const AddRecipe = () => {
   return (
     
 
-<form class="max-w-sm mx-auto" onSubmit={handleSubmit}>
+<form class="max-w-sm mx-auto mt-40 " onSubmit={handleSubmit}>
   <div class="mb-5">
     <label  class="block mb-2 text-sm font-medium  text-black">Recipe Name</label>
-    <input type="text" value={inputs.Recipe_Name} onChange={handleChange} name='Recipe_Name' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"   />
+    <input type="text" value={inputs.Recipe_Name} onChange={handleChange} name='Recipe_Name' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[400px] h-[50px]"   />
   </div>
   <div class="mb-5">
     <label for="N" class="block mb-2 text-sm font-medium  text-black">Ingreients</label>
-    <input type="text"  value={inputs.Ingreients} onChange={handleChange}  name='Ingreients' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"   />
+    <textarea type="text"  value={inputs.Ingreients} onChange={handleChange}  name='Ingreients' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500  w-[400px] h-[150px]"   />
   </div>
   <div class="mb-5">
     <label class="block mb-2 text-sm font-medium  text-black">Desription</label>
-    <input type="text"  value={inputs.Desription} onChange={handleChange}  name='Desription' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  />
+    <textarea type="text"  value={inputs.Desription} onChange={handleChange}  name='Desription' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[400px] h-[150px]"  />
   </div>
   
   <div class=" mb-5">
-  <label class="block mb-2 text-sm font-medium  text-black">Image</label>
+  <label class="block mb-2 text-sm font-medium  text-black">Image Url</label>
   <input type="text"  value={inputs.Image} onChange={handleChange}  name='Image' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
  
   </div>
