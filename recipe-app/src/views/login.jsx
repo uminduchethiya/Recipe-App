@@ -25,12 +25,7 @@ const login = () => {
                 action="#"
                 className="md:bg-transparent md:px-0 md:py-0 bg-orange-50 bg-opacity-75 px-10 py-10 rounded-xl"
             >
-                {/* {message && (
-                    <div className="alert">
-                        <p>{message}</p>
-                    </div>
-                )} */}
-
+              
                 <div className="flex flex-col space-y-1 md:w-[650px] w-[300px] mt-6 md:mx-10 ">
                     <label
                         htmlFor="email"
@@ -39,7 +34,7 @@ const login = () => {
                         Email address
                     </label>
                     <input
-                        ref={""}
+                        
                         type="email"
                         className="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                     />
@@ -60,7 +55,7 @@ const login = () => {
                         </a>
                     </div>
                     <input
-                        ref={""}
+                       
                         type="password"
                         className="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                     />
