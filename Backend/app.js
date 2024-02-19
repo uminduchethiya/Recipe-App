@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/recipes", router);
 app.use("/register", authRoute);
-app.use("/login", loginroute);
+app.use("/login", authRoute);
 
 mongoose
   .connect(
