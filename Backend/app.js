@@ -6,6 +6,7 @@ const cors = require("cors");
 const app = express();
 const router = require("./routes/recipe-routes");
 const authRoute = require("./routes/auth-routes");
+const loginroute=require("./routes/auth-routes");
 const AuthModel = require("./model/auth");
 
 // Middleware
@@ -13,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/recipes", router);
 app.use("/register", authRoute);
-app.use("/login", authRoute);
+app.use("/login", loginroute);
 
 mongoose
   .connect(
