@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Recipe = (props) => {
-  const { _id, Recipe_Name, Ingreients, Desription, Image, isHomePage } = props.recipe;
+  const { _id, Recipe_Name, Ingreients, Desription, Image, isHomePage } =
+    props.recipe;
   const history = useNavigate();
   const [showConfirmation, setShowConfirmation] = useState(false);
 
@@ -50,7 +51,11 @@ const Recipe = (props) => {
         <div className="max-w-sm  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <div className=" ">
             <a href="/recipe">
-              <img className="rounded-t-lg w-[400px] h-[400px]" src={Image} alt="" />
+              <img
+                className="rounded-t-lg w-[400px] h-[400px]"
+                src={Image}
+                alt=""
+              />
             </a>
             <div className="p-5">
               <a href="#">
@@ -62,20 +67,32 @@ const Recipe = (props) => {
               {!isHomePage && (
                 <>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    <span className=" text-white font-bold  text-xl">Ingredients</span><br></br>
+                    <span className=" text-white font-bold  text-xl">
+                      Ingredients
+                    </span>
+                    <br></br>
                     {Ingreients}
                   </p>
                   <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    <span className=" text-white font-bold  text-xl">Description</span><br></br>
+                    <span className=" text-white font-bold  text-xl">
+                      Description
+                    </span>
+                    <br></br>
                     {Desription}
                   </p>
                 </>
               )}
               <div className="flex justify-between">
-                <a href={`/recipe/${_id}`} className=" w-[100px] h-[40px] text-center py-2 rounded-xl text-white  bg-blue-800 ">
+                <a
+                  href={`/recipe/${_id}`}
+                  className=" w-[100px] h-[40px] text-center py-2 rounded-xl text-white  bg-blue-800 "
+                >
                   Update
-                </a> 
-                <button onClick={deleteHandler} className="w-[100px] h-[40px] rounded-xl text-white  bg-blue-800">
+                </a>
+                <button
+                  onClick={deleteHandler}
+                  className="w-[100px] h-[40px] rounded-xl text-white  bg-blue-800"
+                >
                   Delete
                 </button>
               </div>

@@ -2,14 +2,18 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
-const cors =require("cors")
+const cors = require("cors");
 const app = express();
-const router=require("./routes/recipe-routes");
+const router = require("./routes/recipe-routes");
+const authRoute = require("./routes/auth-routes");
+const AuthModel = require("./model/auth");
 
 // Middleware
 app.use(express.json());
 app.use(cors());
-app.use("/recipes",router)
+app.use("/recipes", router);
+app.use("/register", authRoute);
+app.use("/login", authRoute);
 
 mongoose
   .connect(
