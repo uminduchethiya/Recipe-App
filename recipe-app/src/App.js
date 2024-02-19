@@ -1,36 +1,43 @@
 import React from "react";
-import Header from "./components/Header";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation,Navigate } from "react-router-dom";
 import Home from "./components/Home";
 import AddRecipe from "./components/AddRecipe";
 import Recipes from "./components/Recipe/Recipes";
 import About from "./components/About";
 import RecipeDetail from "./components/Recipe/RecipeDetail";
-import Login from "./views/auth/login"
-import Signup from "./views/auth/signup"
-
+import Login from "./views/auth/login";
+import Signup from "./views/auth/signup";
+import Header from "./components/Header";
 
 function App() {
-  return<React.Fragment>
-    <header>
-      <Header/>
-    </header>
-    <main>
-      <Routes>
-        <Route path="/home" element={<Home/>} exact/>
-        <Route path="/add" element={<AddRecipe/>} exact/>
-        <Route path="/recipe" element={<Recipes/>} exact/>
-        <Route path="/about" element={<About/>} exact/>
-        <Route path="/recipe/:id" element={<RecipeDetail/>} exact/>
+  const location = useLocation();
 
+  // Function to determine whether to show the header
+  const showHeader = () => {
+    return !['/login', '/signup'].includes(location.pathname);
+  };
 
-         {/* auth */}
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/signup" element={<Signup/>}/>
-
-      </Routes>
-    </main>
-  </React.Fragment>
+  return (
+    <React.Fragment>
+      {showHeader() && (
+        <header>
+          <Header />
+        </header>
+      )}
+      <main>
+        <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/add" element={<AddRecipe />} />
+          <Route path="/recipe" element={<Recipes />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/recipe/:id" element={<RecipeDetail />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </main>
+    </React.Fragment>
+  );
 }
 
 export default App;
